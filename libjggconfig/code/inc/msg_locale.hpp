@@ -1,0 +1,1 @@
+constexpr auto FILE_NOT_FOUND     = "File: '%s' not found"       ;
