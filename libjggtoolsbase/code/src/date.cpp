@@ -14,7 +14,7 @@ namespace NST {
      DateBridge()                           : DateImpl(){}
      DateBridge(const char *str)            : DateImpl(str) {}
      DateBridge(int year,int month,int day) : DateImpl(year, month, day) {}
-     DateBridge(time_t lvalue)                : DateImpl(lvalue) {}
+     DateBridge(time_t lvalue)              : DateImpl(lvalue) {}
    };
    Date::Date()                : _dtb(new DateBridge(),            [](DateBridge *dtb) { delete dtb; }) {}  
    Date::Date(string str)      : _dtb(new DateBridge(str.c_str()), [](DateBridge *dtb) { delete dtb; }) {}  
@@ -22,7 +22,6 @@ namespace NST {
    Date::Date(time_t lvalue)   : _dtb(new DateBridge(lvalue),      [](DateBridge *dtb) { delete dtb; }) {}
    Date::Date(const Date& t)   : Date(t._dtb->longValue()) {}
    Date::Date(int year,int month,int day) : _dtb(new DateBridge(year, month, day), [](DateBridge *dtb) { delete dtb; }) {}  
-   string     Date::toString(const char* fmt)                         { return _dtb->toString(fmt); }
 
    struct tm* Date::getTM   (struct tm* ptm)  { return _dtb->getTM(ptm);     }
    time_t     Date::longValue  (bool full)    { return _dtb->longValue(full);    }
@@ -31,7 +30,7 @@ namespace NST {
    int        Date::getDay  ()                { return _dtb->getDay();       }
    int        Date::getJulianDay ()           { return _dtb->getJulianDay(); }
 
-   string     Date::toString()                         { return toString("%F"); }
-   char*      Date::toChar  (char *ptr, size_t size)   { return toChar(ptr, size, "%F");    }
+   string     Date::toString()                         { return _dtb->toString("%F"); }
+   char*      Date::toChar  (char *ptr, size_t size)   { return _dtb->toChar(ptr, size, "%F");    }
 
 }

@@ -5,6 +5,7 @@
 #include "msg_locale.hpp"
 #include "exceptions.hpp"
 
+
 #ifdef _WIN32
 #pragma warning( disable : 4996 )
 #endif
@@ -36,6 +37,9 @@ void ToolsException::mountMessage(const char* fmt, va_list list) {
         free(szWhat);
 //        addPointer(std::addressof(szWhat)); 
     }
+void ToolsException::setMessage(const char* msg) {
+        message = string(msg);
+}
 /// \endcond
 ToolsValueException::ToolsValueException(const char* fmt, ...) : ToolsException(fmt) {
 	va_list args;
@@ -52,12 +56,18 @@ ToolsCastException::ToolsCastException(const char* fmt, ...) : ToolsException(fm
 ToolsOutOfRangeException::ToolsOutOfRangeException(string src, string expected) : ToolsException("") {
     char msg[128];
     sprintf(msg, OUT_OF_RANGE, src.c_str(), expected.c_str());
-    message = string(msg);
+    setMessage(msg);
 }
 ToolsOutOfSpaceException::ToolsOutOfSpaceException(size_t size) : ToolsException("") {
     char msg[128];
     sprintf(msg, OUT_OF_SPACE, (int) size);
-    message = string(msg);
+    setMessage(msg);
 }
-
+ToolsNotSupportedException::ToolsNotSupportedException(const char *msg) : ToolsException(msg) {}
+ToolsNotFoundException::ToolsNotFoundException(const char *fmt, ...) : ToolsException(fmt) {
+ 	va_list args;
+	va_start(args, fmt);
+    mountMessage(fmt, args);
+    va_end(args);
+}
 }

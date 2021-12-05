@@ -1,12 +1,12 @@
 #pragma once
 
 #include "make_config.h"
-#include "type.hpp"
+#include "datatype.hpp"
 
 using namespace std;
 
 namespace NST {
-class Natural : Type {
+class Natural : public DataType {
 public:
    Natural();
    Natural(string str);

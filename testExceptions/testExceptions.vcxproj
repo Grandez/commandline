@@ -46,12 +46,12 @@
     <ClCompile Include="testStrings.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libjggtools\libjggtools.vcxproj">
-      <Project>{27667c6e-aab3-4049-9c29-32404940a6ae}</Project>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\libjggtoolsbase\libjggtoolsbase.vcxproj">
+      <Project>{0a7dec7a-0e5f-4b2b-a248-2b5897b25561}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

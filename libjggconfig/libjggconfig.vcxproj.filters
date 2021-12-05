@@ -53,5 +53,8 @@
     <ClInclude Include="..\libjggtoolsbase\include\jggtools.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\libjggtoolsbase\include\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

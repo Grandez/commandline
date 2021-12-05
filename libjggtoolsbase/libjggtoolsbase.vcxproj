@@ -36,7 +36,7 @@
     <ClCompile Include="code\src\sstring.cpp" />
     <ClCompile Include="code\src\time.cpp" />
     <ClCompile Include="code\src\timestamp.cpp" />
-    <ClCompile Include="code\src\type.cpp" />
+    <ClCompile Include="code\src\datatype.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\inc\dateImpl.hpp" />
@@ -53,7 +53,7 @@
     <ClInclude Include="include\short.hpp" />
     <ClInclude Include="include\sstring.hpp" />
     <ClInclude Include="include\time.hpp" />
-    <ClInclude Include="include\type.hpp" />
+    <ClInclude Include="include\datatype.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -111,21 +111,33 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -1,6 +1,7 @@
 #include "jggtools.hpp"
 #include "config_ini.hpp"
 #include "config_factory.hpp"
+#include "exceptions.hpp"
 
 using namespace std;
 namespace NST {
@@ -10,11 +11,12 @@ namespace NST {
        switch(getType(path, type)) {
            case 1: return (ConfigInstance *) new ConfigIni(file);
        }
+       return nullptr; 
    }
    int ConfigFactory::getType(Path& path, const char* type) {
        
        string mtype;
-       if (type != 0x0) {
+       if (type != 0x0 && strlen(type) > 0) {
            mtype = string(type);
        } else {
           mtype = path.getExt();

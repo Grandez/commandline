@@ -16,12 +16,13 @@ namespace NST {
       cwd = filesystem::current_path();
       if (has_root_name()) drive = root_name().string();
       dir = relative_path().string();
+      splitPath();
    }
    PathImpl::PathImpl(const char *str) : path (str) {
        PathType mtype = checkIfExists();
-       if (mtype == PathType::Unknow) valid = false;
-       valid = true;
-       type = mtype;
+       valid = (mtype == PathType::Unknow) ? false : true;
+       if (valid) type = mtype;
+       splitPath();
    }
    PathImpl::PathImpl(std::string str) : path (str.c_str()) {}
 
@@ -40,6 +41,12 @@ namespace NST {
       if (ext.length() == 0) return file;
       return std::string(file).append(".").append(ext);
     }
+   void PathImpl::splitPath()  {
+      if (has_root_name())   drive = root_name().string();
+      if (has_stem())        file  = stem().string();
+      if (has_extension())   ext   = extension().string().substr(1);
+      if (has_parent_path()) dir   = parent_path().string();
+   } 
 /*
     bool PathImpl::checkIfExists() {
         int oldDrive = 0;
@@ -68,26 +75,12 @@ namespace NST {
     PathImpl::PathType PathImpl::checkIfExists() {
        // Check if exists and type of path
        struct stat     statbuf;
-       int rc = stat(this->string().c_str(), &statbuf);
+      cwd = filesystem::current_path();
+       std::string p = string();
+       int rc = stat(string().c_str(), &statbuf);
        if (rc) return PathType::Unknow;
        if (statbuf.st_mode & S_IFDIR) return PathType::Dir;
        if (statbuf.st_mode & S_IFREG) return PathType::File;
        return PathType::Unknow;
     }
-/*
-    void PathImpl::isValidName() {
-        char *pat = "[0x00-0x1F<>\:\"\?\*\|]+"
-
-    < (less than)
-    > (greater than)
-    : (colon)
-    " (double quote)
-    / (forward slash)
-    \ (backslash)
-    | (vertical bar or pipe)
-    ? (question mark)
-    * (asterisk)
-
-    }
-*/
 }

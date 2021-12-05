@@ -3,12 +3,12 @@
 #include <string>
 
 #include "make_config.h"
-#include "type.hpp"
+#include "datatype.hpp"
 
 using namespace std;
 
 namespace NST {
-   class Decimal : public Type {
+   class Decimal : public DataType {
    public:
       Decimal();
       Decimal(string value);

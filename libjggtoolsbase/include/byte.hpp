@@ -1,12 +1,12 @@
 #pragma once
 
 #include "make_config.h"
-#include "type.hpp"
+#include "datatype.hpp"
 
 using namespace std;
 
 namespace NST {
-class Byte : public Type {
+class Byte : public DataType {
 public:
    Byte();
    Byte(string str);

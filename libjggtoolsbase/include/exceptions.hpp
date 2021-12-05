@@ -15,8 +15,10 @@ namespace NST {
       protected:   
 /// \cond DO_NOT_DOCUMENT
          void mountMessage(const char* fmt, va_list list);
-         std::string message;
+         void setMessage(const char *msg);
 /// \endcond
+      private:
+         std::string message;
    };
    class ToolsValueException : public ToolsException {
       public:
@@ -34,4 +36,13 @@ namespace NST {
       public:
          ToolsOutOfSpaceException(size_t size);
    };
+   class ToolsNotSupportedException : public ToolsException {
+      public:
+         ToolsNotSupportedException(const char *msg);
+   };
+   class ToolsNotFoundException : public ToolsException {
+      public:
+         ToolsNotFoundException(const char *fmt, ...);
+   };
+
 }

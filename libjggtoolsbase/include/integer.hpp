@@ -6,7 +6,7 @@
 using namespace std;
 
 namespace NST {
-   class Integer : LongInteger {
+   class Integer : public LongInteger {
    public:
       Integer();
       Integer(string str);

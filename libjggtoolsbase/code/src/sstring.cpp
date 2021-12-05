@@ -16,25 +16,24 @@ namespace NST {
     sstring::sstring(const string& str, size_type pos, size_type n) : string(str,pos,n) {}
 
    sstring&        sstring::ltrim() {
-        int i = 0;
-        while (at(i) == ' ' || at(i) == '\t' || at(i) == '\r') i++;
+        size_t i = 0;
+        char c;
+        for (i; i < length(); i++) {
+             c = at(i);
+             if (c != ' ' && c != '\t' && c != '\r') break;
+        }
         assign(substr(i));
         return *this;
      }
    sstring&        sstring::rtrim() {
         int i;
+        char c;
         bool done = false;
         for (i = (int) this->length() - 1; i > -1; i--) {
-             switch(at(i)) {
-                case ' ':
-                case '\t': 
-                case '\r':
-                case '\n': break;
-                default: done = true;
-             }
-             if (done) break;
+             c = at(i);
+             if (c != ' ' && c != '\t' && c != '\r') break;
         }
-        assign(substr(0, i));
+        assign(substr(0, i+1));
         return *this;     
    }
    sstring&        sstring::trim() {
@@ -124,8 +123,10 @@ namespace NST {
     }
     void sstring::removeQuotes() {
         string str;
-        if (at(0) == '"' || at(0) == '\'') str = substr(1, length() - 2);
-        this->erase();
-        this->append(str);
+        if (length() > 0 && (at(0) == '"' || at(0) == '\'')) {
+            str = substr(1, length() - 2);
+            this->erase();
+            this->append(str);
+        }
     }
 }

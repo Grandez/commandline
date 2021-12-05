@@ -48,7 +48,7 @@
     <ClCompile Include="code\src\longinteger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\src\type.cpp">
+    <ClCompile Include="code\src\datatype.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="code\src\integer.cpp">
@@ -86,7 +86,7 @@
     <ClInclude Include="include\time.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\type.hpp">
+    <ClInclude Include="include\datatype.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\byte.hpp">

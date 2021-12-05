@@ -32,6 +32,6 @@ private:
    int    valid = 1; // -1 true, 0 = false, 1 = undef
    PathType checkIfExists();
    bool changeDrive(path drive);
-//   bool checkIfFileExists();
+   void splitPath();
 };
 }

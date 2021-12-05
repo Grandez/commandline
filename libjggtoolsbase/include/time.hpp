@@ -3,12 +3,12 @@
 #include <vector>
 #include <string>
 
-#include "type.hpp"
+#include "datatype.hpp"
 
 using namespace std;
 
 namespace NST {
-class Time : Type {
+class Time : public DataType {
 public:
    Time();
    Time(string str);
@@ -16,16 +16,14 @@ public:
    Time(int hour, int min, int sec);
    Time(long lvalue);
    struct tm*  getTM(struct tm*);
-   time_t      longValue  (bool full = true);
-   int         getHour();
-   int         getMinutes();
-   int         getSeconds();
-   string  toString(const char* fmt = "%X");
-   char*   toChar  (char *ptr, size_t size, const char* fmt = "%X");
-   char*   format  (char *ptr, size_t size, const char *fmt);   
-   string toString() override;
-   char*  toChar  (char *buff, size_t size) override;
-
+   time_t  longValue  (bool full = true);
+   int     getHour   ();
+   int     getMinutes();
+   int     getSeconds();
+   string  toString  (const char* fmt = "%X");
+   string  toString  () override;
+   char*   toChar    (char *buff, size_t size) override;
+   char*   format    (char *ptr,  size_t size, const char *fmt);   
 private:
     private:
       struct tm mtm;

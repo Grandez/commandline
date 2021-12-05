@@ -1,4 +1,7 @@
 #include <string>
+#include <errno.h>
+#include <fstream>
+
 #include <unordered_map>
 #include <set>
 
@@ -9,6 +12,7 @@
 #pragma warning( disable : 4996 )
 #endif
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -16,40 +20,28 @@ namespace NST {
 
 ConfigIni::ConfigIni (const char *path) {
    this->path = path;
+   loadConfigFile();
+   parseConfigFile();
 }
 void ConfigIni::loadConfigFile () {
-    char *buffer = 0x0;;
     struct stat stat_buf;
-    FILE * pFile = 0x0;;
-    size_t size;
     int rc = stat(path.c_str(), &stat_buf);
+    string line;
     if (rc == 0) {
-        pFile = fopen (path.c_str(),"rt");
-        if (pFile != NULL) {
-            buffer = (char *) malloc(stat_buf.st_size + 1);
-            size = fread(buffer,1, stat_buf.st_size, pFile);
-            if (size != stat_buf.st_size) rc = -1;
-            buffer[stat_buf.st_size] = 0x0;
-        } else {
-            rc = -1;
-        }
-     }
-     if (pFile) fclose(pFile);
-     if (rc == 0) lines = sstring(buffer).tokenize(sstring("\\r\\n|\\r"));
-     free(buffer);
+        ifstream fIn(path.c_str());
+        while (getline(fIn, line)) lines.push_back(line);
+    }
      if (rc != 0) throw new exception("File not found ");
-
 }
 void ConfigIni::writeConfigFile() {
 }
 void ConfigIni::parseConfigFile() {
-   unordered_map<string, set<string>> values; 
    //TODO esto es un parser de tomo y lomo
    const sstring cmt("#");
    const sstring key("=");
    vector<sstring> prev;
    vector<sstring> keys;
-   for (unsigned int line; line < lines.size(); line++) {
+   for (size_t line = 0; line < lines.size(); line++) {
        prev = lines[line].tokenize(cmt);
        prev[0].trim();
        if (prev[0].length() == 0) continue;

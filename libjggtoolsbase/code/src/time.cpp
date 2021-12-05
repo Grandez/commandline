@@ -46,9 +46,8 @@ namespace NST {
        format(szTime, 64, fmt);  
        return string(szTime);
    }
-   char*      Time::toChar  (char *ptr, size_t size, const char* fmt)       { return format(ptr, size, fmt);   }
    string Time::toString()                        { return toString("%X"); }
-   char*  Time::toChar  (char *buff, size_t size) { return toChar(buff, size, "%X"); }
+   char*  Time::toChar  (char *buff, size_t size) { return format(buff, size, "%X"); }
 
    char*      Time::format  (char *ptr, size_t size, const char *fmt)       { 
         size_t res = strftime(ptr, size, fmt, &mtm); 

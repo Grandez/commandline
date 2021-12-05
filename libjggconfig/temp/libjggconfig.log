@@ -1,0 +1,29 @@
+﻿Build started 05/12/2021 13:32:15.
+Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggconfig\libjggconfig.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "P:\C\commandline\libjggconfig\\temp\libjggconfig.tlog\libjggconfig.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "P:\C\commandline\libjggconfig\\temp\libjggconfig.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"P:\C\commandline\libjggconfig\\temp\\" /Fd"P:\C\commandline\\libs\libjggconfig64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\configuration.cpp code\src\config_factory.cpp code\src\config_ini.cpp code\src\config_instance.cpp
+         configuration.cpp
+         config_factory.cpp
+         config_ini.cpp
+         config_instance.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\commandline\\libs\libjggconfig64.lib" libjggtoolsbase64.lib /LIBPATH:P:\C\commandline\\libs\ /NOLOGO /MACHINE:X64 P:\C\commandline\libjggconfig\\temp\configuration.obj
+         P:\C\commandline\libjggconfig\\temp\config_factory.obj
+         P:\C\commandline\libjggconfig\\temp\config_ini.obj
+         P:\C\commandline\libjggconfig\\temp\config_instance.obj
+         libjggconfig.vcxproj -> P:\C\commandline\libs\libjggconfig64.lib
+       FinalizeBuildStatus:
+         Deleting file "P:\C\commandline\libjggconfig\\temp\libjggconfig.tlog\unsuccessfulbuild".
+         Touching "P:\C\commandline\libjggconfig\\temp\libjggconfig.tlog\libjggconfig.lastbuildstate".
+     1>Done Building Project "P:\C\commandline\libjggconfig\libjggconfig.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.92

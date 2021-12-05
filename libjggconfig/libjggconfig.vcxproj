@@ -25,6 +25,7 @@
     <ClCompile Include="code\src\config_instance.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\libjggtoolsbase\include\exceptions.hpp" />
     <ClInclude Include="..\libjggtoolsbase\include\jggtools.hpp" />
     <ClInclude Include="..\libjggtools\include\path.hpp" />
     <ClInclude Include="code\inc\config_ini.hpp" />
@@ -95,29 +96,33 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)\libjggtoolsbase\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
-    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
     <TargetName>$(ProjectName)32</TargetName>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)\libjggtoolsbase\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
-    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
     <TargetName>$(ProjectName)32</TargetName>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)\libjggtoolsbase\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
-    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
     <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)\libjggtoolsbase\include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
-    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <OutDir>$(SolutionDir)\libs\</OutDir>
     <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(ProjectDir)\temp\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,6 +139,10 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\libs\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjggtoolsbase32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -154,6 +163,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\libs\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjggtoolsbase32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -170,6 +183,10 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\libs\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjggtoolsbase64.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -190,6 +207,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\libs\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjggtoolsbase64.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,12 +5,12 @@
 #include <memory>
 
 #include "make_config.h"
-#include "type.hpp"
+#include "datatype.hpp"
 
 using namespace std;
 
 namespace NST {
-class Date : public Type {
+class Date : public DataType {
 public:
    Date();
    Date(const Date& src);
@@ -25,8 +25,6 @@ public:
    int getDay();
    int getJulianDay();
 
-   string  toString(const char* fmt = "%F");
-   char*   toChar  (char *ptr, size_t size, const char *fmt = "%F"); 
    string  toString() override;
    char*   toChar  (char *buff, size_t size) override;
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "make_config.h"
-#include "type.hpp"
+#include "datatype.hpp"
 #include "integer.hpp"
 
 using namespace std;
