@@ -9,11 +9,10 @@
 
 #include "pch.h"
 #include <iostream>
-
-#include "../libjggtools/include/exceptions.hpp"
+/*
+#include "../libcmdline/include/commandline.hpp"
 
 using namespace std;
-
 using namespace NST;
 
 TEST(Exceptions, general) {
@@ -25,3 +24,4 @@ try {
 }
 EXPECT_EQ(strcmp(data, "exception"), 0);
 }
+*/

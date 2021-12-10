@@ -9,14 +9,14 @@
 #endif
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    Integer::Integer() : LongInteger() {}
    Integer::Integer(long  value)    : LongInteger(value) {}
-   Integer::Integer(string str)      : LongInteger(str) {
-      if (!isInteger()) throw new ToolsOutOfRangeException(str, "Integer");
+   Integer::Integer(string str)     : LongInteger(str) {
+      if (!LongInteger::isInteger()) throw new ToolsOutOfRangeException(str, "Integer");
    }
    Integer::Integer(const char *str) : LongInteger(str) {
-      if (!isInteger()) throw new ToolsOutOfRangeException(str, "Integer");   
+      if (!LongInteger::isInteger()) throw new ToolsOutOfRangeException(str, "Integer");   
    }
    string Integer::toString() { return to_string(value); }
    char*  Integer::toChar  (char *buff, size_t size) {

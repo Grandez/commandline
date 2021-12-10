@@ -8,7 +8,7 @@
 #include "dateImpl.hpp"
 #include "date.hpp"
 
-namespace NST {
+namespace NSCLP {
    class Date::DateBridge : public DateImpl {
    public:
      DateBridge()                           : DateImpl(){}

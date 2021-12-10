@@ -10,7 +10,7 @@
 #endif
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    Short::Short() : Integer() {}
    Short::Short(short  value)    : Integer(value) {}
    Short::Short(char   value)    : Integer(value) {}

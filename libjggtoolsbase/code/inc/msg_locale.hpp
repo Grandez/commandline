@@ -46,5 +46,6 @@ constexpr auto BAD_REAL         = "'%s' Is not a real number"                   
 constexpr auto BAD_DECIMAL      = "'%s' Is not a decimal number"                    ;
 constexpr auto BAD_FORMAT       = "'%s' Is not a valid format for date times"       ;
 constexpr auto BAD_VALUE        = "'%d' Is not a valid value for date times"        ;
+constexpr auto BAD_LOGICAL      = "'%s' Is not a logical value"                     ;
 constexpr auto OUT_OF_RANGE     = "'%s' Is not a valid value for type '%s'"         ;
 constexpr auto OUT_OF_SPACE     = "%d Bytes is not enough to store the value"       ;

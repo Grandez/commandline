@@ -1,6 +1,6 @@
 #include "config_instance.hpp"
 
-namespace NST {
+namespace NSCLP {
 unordered_map<string, set<string>> ConfigInstance::getPairKeyValues() {
    return values;
 }

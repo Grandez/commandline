@@ -15,7 +15,7 @@
 #pragma warning( disable : 4996 6385)
 #endif
 
-namespace NST {
+namespace NSCLP {
    DateImpl::DateImpl()      {
       time_t now = time(0);
       memcpy(&mtm, localtime(&now), sizeof(struct tm));

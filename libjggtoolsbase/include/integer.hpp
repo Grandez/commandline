@@ -1,11 +1,10 @@
 #pragma once
 
-#include "make_config.h"
 #include "longinteger.hpp"
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Integer : public LongInteger {
    public:
       Integer();

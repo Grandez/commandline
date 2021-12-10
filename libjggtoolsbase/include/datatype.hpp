@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class DataType {
    public:
        virtual string toString() = 0;

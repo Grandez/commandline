@@ -32,16 +32,10 @@
     <ClInclude Include="include\configuration.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\make_config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="code\inc\config_instance.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\inc\config_factory.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\libjggtools\include\path.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\inc\msg_locale.hpp">

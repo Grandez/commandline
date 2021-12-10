@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class ToolsException : public std::domain_error {
       public:
          ToolsException(const char *fmt, ...);

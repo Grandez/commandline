@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    Natural::Natural() { value = 0x0; }
    Natural::Natural(string str) : Natural(str.c_str()) {}
    Natural::Natural(const char *str) {

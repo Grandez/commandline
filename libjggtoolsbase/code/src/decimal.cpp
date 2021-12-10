@@ -10,7 +10,7 @@
 #pragma warning( disable : 4996 4244 )
 #endif
 
-namespace NST {
+namespace NSCLP {
    Decimal::Decimal(string      value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}
    Decimal::Decimal(const char* value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}
    Decimal::Decimal(double      value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}

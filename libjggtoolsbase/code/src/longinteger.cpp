@@ -9,7 +9,7 @@
 #endif
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    LongInteger::LongInteger() {}
    LongInteger::LongInteger(long long   value)  { this->value = value; }
    LongInteger::LongInteger(string str) : LongInteger(str.c_str()) {}

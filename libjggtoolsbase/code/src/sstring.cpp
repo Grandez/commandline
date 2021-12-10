@@ -7,7 +7,7 @@
 #pragma warning( disable : 4996 )
 #endif
 
-namespace NST {
+namespace NSCLP {
     sstring::sstring()                   : string()    { removeQuotes(); }
     sstring::sstring(string str)         : string(str) { removeQuotes(); }
     sstring::sstring(const char *src)    : string(src) { removeQuotes(); }

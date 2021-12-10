@@ -10,7 +10,7 @@
 #pragma warning( disable : 4996 4244 )
 #endif
 
-namespace NST {
+namespace NSCLP {
    Decimal::DecimalImpl::DecimalImpl(string value) { DecimalImpl(value.c_str()); }
    Decimal::DecimalImpl::DecimalImpl(const char* value)  {
         regex pat{"^[+-]?[0-9]*[\\.,]?[0-9]*$"};

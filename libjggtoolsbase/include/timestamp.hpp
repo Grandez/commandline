@@ -14,7 +14,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Timestamp : public DateTime {
    public:
       Timestamp();

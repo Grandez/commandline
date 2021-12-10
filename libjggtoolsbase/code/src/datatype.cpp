@@ -3,7 +3,7 @@
 
 #include "datatype.hpp"
 
-namespace NST {
+namespace NSCLP {
 int DataType::getBase (const char *str) {
      int beg = 0;
      if (strlen(str) < 3) return 10;

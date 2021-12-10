@@ -12,7 +12,6 @@
 #include "sstring.hpp"
 #include "msg_locale.hpp"
 #include "exceptions.hpp"
-//#include "time.hpp"
 #include "datetimeImpl.hpp"
 
 #ifdef _WIN32
@@ -22,7 +21,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    DateTimeImpl::DateTimeImpl()                {
       std::time_t now;
       time(&now);

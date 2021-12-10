@@ -9,7 +9,7 @@
 #include "exceptions.hpp"
 #include "time.hpp"
 
-namespace NST {
+namespace NSCLP {
    Time::Time()  {
       time_t now = time(0);
       memcpy(&mtm, localtime(&now), sizeof(struct tm));

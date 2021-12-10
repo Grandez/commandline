@@ -1,11 +1,10 @@
 #pragma once
 
-#include "make_config.h"
 #include "datatype.hpp"
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class LongInteger : public DataType {
 public:
    LongInteger();

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class Time : public DataType {
 public:
    Time();

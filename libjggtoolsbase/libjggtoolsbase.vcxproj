@@ -28,6 +28,7 @@
     <ClCompile Include="code\src\decimalImpl.cpp" />
     <ClCompile Include="code\src\exceptions.cpp" />
     <ClCompile Include="code\src\integer.cpp" />
+    <ClCompile Include="code\src\logical.cpp" />
     <ClCompile Include="code\src\longinteger.cpp" />
     <ClCompile Include="code\src\natural.cpp" />
     <ClCompile Include="code\src\path.cpp" />
@@ -41,13 +42,13 @@
   <ItemGroup>
     <ClInclude Include="code\inc\dateImpl.hpp" />
     <ClInclude Include="code\inc\decimalImpl.hpp" />
-    <ClInclude Include="code\inc\make_config.h" />
     <ClInclude Include="code\inc\msg_locale.hpp" />
     <ClInclude Include="code\inc\pathImpl.hpp" />
     <ClInclude Include="include\byte.hpp" />
     <ClInclude Include="include\decimal.hpp" />
     <ClInclude Include="include\exceptions.hpp" />
     <ClInclude Include="include\integer.hpp" />
+    <ClInclude Include="include\logical.hpp" />
     <ClInclude Include="include\longinteger.hpp" />
     <ClInclude Include="include\natural.hpp" />
     <ClInclude Include="include\short.hpp" />
@@ -109,7 +110,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
     <OutDir>$(SolutionDir)\libs\</OutDir>
     <IntDir>$(ProjectDir)\temp\</IntDir>
@@ -117,7 +118,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
     <OutDir>$(SolutionDir)\libs\</OutDir>
     <IntDir>$(ProjectDir)\temp\</IntDir>
@@ -125,7 +126,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
     <OutDir>$(SolutionDir)\libs\</OutDir>
     <IntDir>$(ProjectDir)\temp\</IntDir>
@@ -133,7 +134,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\code\inc\;$(ProjectDir)\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)\code\src\;$(SourcePath)</SourcePath>
     <OutDir>$(SolutionDir)\libs\</OutDir>
     <IntDir>$(ProjectDir)\temp\</IntDir>

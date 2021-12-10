@@ -1,11 +1,10 @@
 #pragma once
 
-#include "make_config.h"
 #include "decimal.hpp"
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Decimal::DecimalImpl {
    public:
       DecimalImpl(); 

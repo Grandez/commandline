@@ -8,7 +8,7 @@
 #include "make_config.h"
 
 using namespace std;
-namespace NST {
+namespace NSCLP {
    class Configuration {
       public:
           Configuration() = delete;

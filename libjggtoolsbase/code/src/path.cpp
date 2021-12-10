@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Path::PathBridge : public PathImpl {
    public:
      PathBridge()                  : PathImpl(){}
@@ -31,5 +31,7 @@ namespace NST {
    string Path::getFileName()     { return _pb->getFileName(); }
    string Path::getExt()          { return _pb->getExt();      }
    string Path::getBaseName()     { return _pb->getBaseName(); }
+   string Path::toString()        { return _pb->toString(); }
+   char*  Path::toChar(char *buff, size_t size) { return _pb->toChar(buff, size); }
 
  }

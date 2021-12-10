@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class Date : public DataType {
 public:
    Date();

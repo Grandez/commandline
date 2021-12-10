@@ -1,6 +1,7 @@
 #include <string>
 #include <filesystem>
 #include <direct.h>
+#include "exceptions.hpp"
 #include "pathImpl.hpp"
 
 #ifdef _WIN32
@@ -10,7 +11,7 @@
 using namespace std;
 using namespace std::filesystem;
 
-namespace NST {
+namespace NSCLP {
 
    PathImpl::PathImpl() : path(filesystem::current_path()) {
       cwd = filesystem::current_path();
@@ -41,6 +42,15 @@ namespace NST {
       if (ext.length() == 0) return file;
       return std::string(file).append(".").append(ext);
     }
+   char* PathImpl::toChar   (char *ptr, size_t size) {
+       char *str = strdup(string().c_str());
+       if (strlen(str) >= size) throw new ToolsOutOfSpaceException(size);
+       strcpy(ptr, str);
+       free(str);
+       return ptr;
+    }
+   string PathImpl::toString   () { return string(); }
+
    void PathImpl::splitPath()  {
       if (has_root_name())   drive = root_name().string();
       if (has_stem())        file  = stem().string();

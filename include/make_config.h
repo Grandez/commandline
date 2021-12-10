@@ -17,22 +17,20 @@
 #define NSCLP CMDLINE_NSCLP
 #endif
 
-#ifndef CMDLINE_NSCLP2
-#define CMDLINE_NSCLP2 _clp
-#define NSCLP2 CMDLINE_NSCLP2
+// Max name for parameters and flags
+#ifndef MAX_PARM_NAME
+#define MAX_PARM_NAME   64 
 #endif
 
-#ifndef ENV_PREFFIX
-#define ENV_PREFFIX "env_preffix"
+#ifndef MAX_SIZE_ERR
+#define MAX_SIZE_ERR   255 
 #endif
 
-#define NST jggtools
 
-#define MAX_PARM_NAME   64
-
-#define OPTION          '/'
-#define DEFINITION      '$'
-#define FLAG_ACTIVE     '+' 
-#define FLAG_INACTIVE   '-' 
-
+// Flags for items
+#define ITEM_OPTION          '/'
+#define ITEM_DEFINITION      '$'
+#define ITEM_FLAG_ACTIVE     '+' 
+#define ITEM_FLAG_INACTIVE   '-' 
+#define ITEM_NAMED           '=' 
 #endif

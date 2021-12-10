@@ -4,7 +4,7 @@
 #include "exceptions.hpp"
 
 using namespace std;
-namespace NST {
+namespace NSCLP {
    ConfigInstance *ConfigFactory::getInstance(const char *file, const char *type) {
        Path path(file);
        if (!path.exists()) throw new ToolsNotFoundException(FILE_NOT_FOUND, path.getPath());

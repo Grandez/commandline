@@ -5,7 +5,7 @@
 
 #include "make_config.h"
 
-namespace NST {
+namespace NSCLP {
    class DateImpl {
    public:   
       const enum class Type {TMS, DATETIME, DATE, TIME};

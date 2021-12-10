@@ -4,7 +4,7 @@
 #include "config_instance.hpp"
 
 using namespace std;
-namespace NST {
+namespace NSCLP {
    class ConfigFactory {
       public:
           static ConfigInstance *getInstance(const char *file, const char *type);

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class DateTime : public Time {
 public:
    DateTime();

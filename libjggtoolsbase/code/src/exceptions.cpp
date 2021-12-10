@@ -12,7 +12,7 @@
 #include <cstdarg>
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
  ToolsException::ToolsException(const char* fmt, ...) :  domain_error(fmt) {
 	va_list args;
 	va_start(args, fmt);

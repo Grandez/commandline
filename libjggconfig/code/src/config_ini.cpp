@@ -16,7 +16,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 
 ConfigIni::ConfigIni (const char *path) {
    this->path = path;
@@ -31,7 +31,7 @@ void ConfigIni::loadConfigFile () {
         ifstream fIn(path.c_str());
         while (getline(fIn, line)) lines.push_back(line);
     }
-     if (rc != 0) throw new exception("File not found ");
+     if (rc != 0) throw new ToolsNotFoundException(FILE_NOT_FOUND, path.c_str());
 }
 void ConfigIni::writeConfigFile() {
 }

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    Byte::Byte() { value = 0x0; }
    Byte::Byte(string str) : Byte(str.c_str()) {}
    Byte::Byte(const char *str) {

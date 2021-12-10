@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class Byte : public DataType {
 public:
    Byte();

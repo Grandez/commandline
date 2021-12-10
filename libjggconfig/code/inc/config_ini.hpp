@@ -5,7 +5,7 @@
 
 #include "config_instance.hpp" 
 
-namespace NST {
+namespace NSCLP {
 class ConfigIni : public ConfigInstance {
    public:
       ConfigIni(const char *path);

@@ -15,7 +15,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    DateTime::DateTime()                {
       std::time_t now;
       time(&now);
@@ -55,8 +55,10 @@ namespace NST {
    time_t      DateTime::timet() { return lvalue; }
    void DateTime::fillTM(Date *pDate, Time *pTime) {
       time_t value = pDate->longValue(false);
-      value += pTime->getHour() * 3600;
-      value += pTime->getMinutes() * 60;
+      long aux = pTime->getHour() * 3600;
+      value += aux; 
+      aux = pTime->getMinutes() * 60;
+      value += aux;
       value += pTime->getSeconds();
       memcpy(&mtm, localtime(&value), sizeof(struct tm));
     }

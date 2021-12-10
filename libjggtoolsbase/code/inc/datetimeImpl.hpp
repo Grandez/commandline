@@ -8,7 +8,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class DateTimeImpl {
    public:   
       const enum class Type {TMS, DATETIME, DATE, TIME};

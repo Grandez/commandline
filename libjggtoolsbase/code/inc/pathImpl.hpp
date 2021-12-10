@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class PathImpl : public filesystem::path {
 public:
    PathImpl();
@@ -21,6 +21,9 @@ public:
    std::string getFileName();
    std::string getExt     ();
    std::string getBaseName(); 
+
+   char*       toChar   (char *ptr, size_t size);
+   std::string toString ();
 private:
    enum class PathType { Unknow, Block, Character, Fifo, File, Dir, Link, Socket};
    path cwd;

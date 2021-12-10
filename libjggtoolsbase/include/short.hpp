@@ -1,12 +1,10 @@
 #pragma once
 
-#include "make_config.h"
-#include "datatype.hpp"
 #include "integer.hpp"
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class Short : public Integer {
 public:
    Short();

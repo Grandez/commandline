@@ -69,11 +69,11 @@
     <ClCompile Include="code\src\pathImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="code\src\logical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="code\inc\make_config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="code\inc\msg_locale.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -114,6 +114,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logical.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
 class sstring : public string {
 public:
 

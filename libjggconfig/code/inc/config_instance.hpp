@@ -7,9 +7,8 @@
 #include "jggtools.hpp"
 
 using namespace std;
-namespace NST {
-
-class ConfigInstance {
+namespace NSCLP {
+   class ConfigInstance {
    public:
       unordered_map<string, set<string>> getPairKeyValues();
       set<string>                        getKeyValues();
@@ -20,5 +19,5 @@ class ConfigInstance {
       string path;
       vector<sstring> lines;
       unordered_map<string, set<string>> values;
-};
+   };
 }

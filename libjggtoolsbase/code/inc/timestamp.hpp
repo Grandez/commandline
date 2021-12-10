@@ -14,7 +14,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Timestamp : public DateTime {
    public:
       Timestamp();
@@ -25,7 +25,7 @@ namespace NST {
       char*  toChar(char *buff, size_t size) override;
 
    private:
-       static long int uSec;
+       long int uSec = 0;
    };
 
 }

@@ -1,14 +1,11 @@
 #include <string>
 
-
-//#include "configImpl.hpp"
 #include "config_factory.hpp"
-#include "config_instance.hpp"
 #include "configuration.hpp"
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Configuration::ConfigBridge {
    public:
        ConfigBridge(const char *configFile, const char *type) {

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NST {
+namespace NSCLP {
    class Decimal : public DataType {
    public:
       Decimal();
