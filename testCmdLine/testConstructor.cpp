@@ -1,9 +1,8 @@
 #include "pch.h"
 
-#include "../include/make_config.h"
-#include "../libcmdline/include/cmdline_cmdline.hpp"
+#include "test_config.h"
 
-using namespace NSCLP;
+
 
 TEST(CmdLine, TestName) {
   const char *args[] = {"TEST", 0x0};

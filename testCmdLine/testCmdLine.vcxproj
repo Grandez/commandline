@@ -33,19 +33,20 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libcmdline\include\;$(SolutionDir)libjggtoolsbase\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libcmdline\include\;$(SolutionDir)libjggtoolsbase\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libcmdline\include\;$(SolutionDir)libjggtoolsbase\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libcmdline\include\;$(SolutionDir)libjggtoolsbase\include\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="test_config.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -55,6 +56,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="testConstructor.cpp" />
+    <ClCompile Include="testHelp.cpp" />
+    <ClCompile Include="testTools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

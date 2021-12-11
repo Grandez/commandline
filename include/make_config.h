@@ -33,4 +33,5 @@
 #define ITEM_FLAG_ACTIVE     '+' 
 #define ITEM_FLAG_INACTIVE   '-' 
 #define ITEM_NAMED           '=' 
+#define ITEM_SEPARATOR       ';' 
 #endif
