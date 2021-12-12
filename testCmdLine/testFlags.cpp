@@ -45,3 +45,15 @@ TEST(Flags, flags_active) {
   EXPECT_TRUE (cmdline.hasFlag("verbose"));
   EXPECT_FALSE(cmdline.hasFlag("echo"));
 }
+TEST(Flags, flags_letters) {
+  const char *args[] = {"TEST", "+abc"};
+  Parameters parms = {
+     ParmFlag("aflag")
+    ,ParmFlag("bflag")
+    ,ParmFlag("cflag")
+  }; 
+  CmdLine cmdline(2, args, parms);
+  EXPECT_TRUE (cmdline.hasFlag("aflag"));
+  EXPECT_TRUE (cmdline.hasFlag("bflag"));
+  EXPECT_TRUE (cmdline.hasFlag("cflag"));
+}

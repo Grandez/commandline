@@ -20,6 +20,7 @@ namespace NSCLP {
    Logical::Logical(const char *str) { setValue(str); }
    Logical::Logical(char value)      { this->mValue = value; }
    Logical::Logical(long lvalue)     { mValue = (lvalue == 0) ? false : true; }
+   Logical::Logical(bool bvalue)     { mValue = bvalue;                       }
    bool Logical::value()             { 
         return mValue;                          
    } 

@@ -12,6 +12,7 @@ public:
    Logical(const char *str);
    Logical(char value);
    Logical(long lvalue);
+   Logical(bool bvalue);
    bool   value();
    string toString() override;
    char*  toChar  (char *buff, size_t size) override;
