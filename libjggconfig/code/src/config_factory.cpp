@@ -22,7 +22,8 @@ namespace NSCLP {
           mtype = path.getExt();
        }
        for (size_t i = 0; i < mtype.length(); i++) mtype[i] = tolower(mtype[i]);
-       if (mtype == "ini") return 1;
+       if (mtype == "ini")        return 1;
+       if (mtype == "properties") return 1;
        string msg("Configuration files for type ");
        msg.append(mtype).append(" is not implemented");
        throw new ToolsNotSupportedException(msg.c_str());
