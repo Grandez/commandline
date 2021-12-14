@@ -36,7 +36,6 @@ void ConfigIni::loadConfigFile () {
 void ConfigIni::writeConfigFile() {
 }
 void ConfigIni::parseConfigFile() {
-   //TODO esto es un parser de tomo y lomo
    const sstring cmt("#");
    const sstring key("=");
    vector<sstring> prev;
@@ -49,14 +48,13 @@ void ConfigIni::parseConfigFile() {
        if (keys.size() != 2) continue;
        keys[0].trim();
        keys[1].trim();
-       try {
-		  set<string> *value = &values.at(keys[0]);
-          value->insert(keys[1]);
-	   }
-	   catch (out_of_range ex) {
+       if (values.find(keys[0]) == values.end()) {
            set<string> value = {keys[1]};
            values.emplace(keys[0], value);
-		}
+       } else {
+		  set<string> *value = &values.at(keys[0]);
+          value->insert(keys[1]);
+       }
    }
 }
 

@@ -31,7 +31,8 @@ public:
     bool makeBoolean();
 
     vector<char *>  tokenize(const char *pat);
-    vector<sstring> tokenize(string pat);
+    vector<string>  tokenize(string pat);
+    vector<sstring> tokenize(sstring pat);
 	vector<int>     tokenizeNumber(const char* pat);
     sstring         paste(const char *sep, ...);
 private:

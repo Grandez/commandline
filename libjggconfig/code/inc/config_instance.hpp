@@ -10,8 +10,8 @@ using namespace std;
 namespace NSCLP {
    class ConfigInstance {
    public:
-      unordered_map<string, set<string>> getPairKeyValues();
-      set<string>                        getKeyValues();
+      unordered_map<string, set<string>>& getPairKeyValues();
+      set<string>                         getKeyValues();
       virtual void loadConfigFile() = 0;
       virtual void writeConfigFile() = 0;
       virtual void parseConfigFile() = 0;

@@ -1,10 +1,13 @@
-﻿Build started 12/12/2021 14:22:51.
+﻿Build started 14/12/2021 15:07:15.
 Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Creating "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"P:\C\commandline\libjggtoolsbase\\temp\\" /Fd"P:\C\commandline\\libs\libjggtoolsbase64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\logical.cpp
-         logical.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"P:\C\commandline\libjggtoolsbase\\temp\\" /Fd"P:\C\commandline\\libs\libjggtoolsbase64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\sstring.cpp code\src\time.cpp code\src\timestamp.cpp
+         sstring.cpp
+         time.cpp
+         timestamp.cpp
+         Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\commandline\\libs\libjggtoolsbase64.lib" /NOLOGO /MACHINE:X64 P:\C\commandline\libjggtoolsbase\\temp\byte.obj
          P:\C\commandline\libjggtoolsbase\\temp\date.obj
@@ -35,4 +38,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.48
+Time Elapsed 00:00:02.10

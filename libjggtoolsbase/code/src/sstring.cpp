@@ -65,12 +65,21 @@ namespace NSCLP {
          return c_str();
     }
    vector<char *>  sstring::tokenize(const char* pat) {
-	  vector<sstring> toks = tokenize(string(pat));
+	  vector<sstring> toks = tokenize(sstring(pat));
       vector<char *> res(toks.size());
       for (size_t i = 0; i < toks.size(); i++) res.at(i) = strdup(toks[i].c_str());
 	  return res;
     }
-   vector<sstring> sstring::tokenize(string pat) {
+   vector<string> sstring::tokenize(string pat) {
+	     regex reg(pat);
+         sregex_token_iterator iter(begin(), end(), reg, -1);
+         sregex_token_iterator end;
+         return vector<string>(iter, end);
+//         vector<sstring> res;
+//         for (size_t i = 0; i < vec.size(); i++) res.push_back(sstring(vec[i]));
+//	     return res;
+    }
+   vector<sstring> sstring::tokenize(sstring pat) {
 	     regex reg(pat);
          sregex_token_iterator iter(begin(), end(), reg, -1);
          sregex_token_iterator end;
@@ -79,6 +88,7 @@ namespace NSCLP {
          for (size_t i = 0; i < vec.size(); i++) res.push_back(sstring(vec[i]));
 	     return res;
     }
+
    vector<int>     sstring::tokenizeNumber(const char* pat) {
 		vector<int> res;
 		vector<char *> vec = tokenize(pat);
