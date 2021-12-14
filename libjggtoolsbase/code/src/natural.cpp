@@ -3,7 +3,7 @@
 #include <string>
 
 #include "exceptions.hpp"
-#include "Natural.hpp"
+#include "natural.hpp"
 
 using namespace std;
 
@@ -28,10 +28,8 @@ namespace NSCLP {
       if (lv < 0)                           throw new ToolsOutOfRangeException(str, "Natural"); 
       mValue = lv;
    }
-   Natural::Natural(long lvalue) {
-      this->mValue = lvalue;
-   }
-   string Natural::toString() { return to_string(mValue); }
+   Natural::Natural(long lvalue) { this->mValue = lvalue; }
+   string Natural::toString()                        { return to_string(mValue); }
    char*  Natural::toChar  (char *buff, size_t size) {
         long nValue = (long) mValue;
         int res = snprintf(buff, size, "%d", nValue);

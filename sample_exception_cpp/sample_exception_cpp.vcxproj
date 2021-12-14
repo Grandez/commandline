@@ -72,22 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <ExternalIncludePath>$(SolutionDir)include</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</ExternalIncludePath>
     <OutDir>P:\C\test\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <ExternalIncludePath>$(SolutionDir)include</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</ExternalIncludePath>
     <OutDir>P:\C\test\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>P:\C\test\bin\</OutDir>
-    <ExternalIncludePath>$(SolutionDir)include</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <ExternalIncludePath>$(SolutionDir)include</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</ExternalIncludePath>
     <OutDir>P:\C\test\bin\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -160,7 +160,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.hpp" />
+    <ClInclude Include="labels.hpp" />
     <ClInclude Include="showinfo.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libcmdline\libcmdline.vcxproj">
+      <Project>{3cd8174e-514b-4f1a-9f33-130ceef336ee}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

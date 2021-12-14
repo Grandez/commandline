@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\libcmdline\include\commandline.hpp"
+#include "cmdline_cmdline.hpp"
 
-void showHelp    (HelpRequested* help);
-void showValues  ();
+void showHelp    (NSCLP::HelpRequested*);
+void showValues  (NSCLP::CmdLine *);
