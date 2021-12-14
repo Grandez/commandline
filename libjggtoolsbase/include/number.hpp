@@ -9,7 +9,7 @@ using namespace std;
 namespace NSCLP {
    class Number : public DataType {
    public:
-       long value() { return mValue; }
+       long value() { return (long) mValue; }
        virtual string toString() = 0;
        virtual char*  toChar(char *buff, size_t size)   = 0;
        bool operator< (const Number& rhs) { return mValue     < rhs.mValue; }
@@ -28,6 +28,6 @@ namespace NSCLP {
 
    protected:
        int getBase(const char *str);
-       long mValue = 0; 
+       long long mValue = 0; 
    };
 }

@@ -1,4 +1,4 @@
-﻿Build started 14/12/2021 17:32:56.
+﻿Build started 14/12/2021 18:16:07.
 Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" on node 2 (Rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\libjggtoolsbase.lastbuildstate".
@@ -56,4 +56,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:09.86
+Time Elapsed 00:00:10.07

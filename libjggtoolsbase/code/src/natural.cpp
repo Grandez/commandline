@@ -33,7 +33,8 @@ namespace NSCLP {
    }
    string Natural::toString() { return to_string(mValue); }
    char*  Natural::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%d", mValue);
+        long nValue = (long) mValue;
+        int res = snprintf(buff, size, "%d", nValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }
