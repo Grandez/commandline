@@ -24,4 +24,6 @@ namespace NSCLP {
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }
+   bool Integer::isShort()   { return LongInteger::isShort();   }
+   bool Integer::isInteger() { return LongInteger::isInteger(); }
 }

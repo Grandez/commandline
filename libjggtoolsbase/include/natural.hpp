@@ -1,11 +1,11 @@
 #pragma once
 
-#include "datatype.hpp"
+#include "number.hpp"
 
 using namespace std;
 
 namespace NSCLP {
-class Natural : public DataType {
+class Natural : public Number {
 public:
    Natural();
    Natural(string str);
@@ -13,8 +13,5 @@ public:
    Natural(long lvalue);
    string toString() override;
    char*  toChar  (char *buff, size_t size) override;
-
-private:
-   long value;
 };
 }

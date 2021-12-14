@@ -1,12 +1,12 @@
 p:\c\commandline\libs\libjggtoolsbase64.pdb
 p:\c\commandline\libs\libjggtoolsbase64.idb
-p:\c\commandline\libjggtoolsbase\temp\datatype.obj
 p:\c\commandline\libjggtoolsbase\temp\timestamp.obj
 p:\c\commandline\libjggtoolsbase\temp\time.obj
 p:\c\commandline\libjggtoolsbase\temp\sstring.obj
 p:\c\commandline\libjggtoolsbase\temp\short.obj
 p:\c\commandline\libjggtoolsbase\temp\pathimpl.obj
 p:\c\commandline\libjggtoolsbase\temp\path.obj
+p:\c\commandline\libjggtoolsbase\temp\number.obj
 p:\c\commandline\libjggtoolsbase\temp\natural.obj
 p:\c\commandline\libjggtoolsbase\temp\longinteger.obj
 p:\c\commandline\libjggtoolsbase\temp\logical.obj

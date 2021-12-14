@@ -31,13 +31,13 @@
     <ClCompile Include="code\src\logical.cpp" />
     <ClCompile Include="code\src\longinteger.cpp" />
     <ClCompile Include="code\src\natural.cpp" />
+    <ClCompile Include="code\src\number.cpp" />
     <ClCompile Include="code\src\path.cpp" />
     <ClCompile Include="code\src\pathImpl.cpp" />
     <ClCompile Include="code\src\short.cpp" />
     <ClCompile Include="code\src\sstring.cpp" />
     <ClCompile Include="code\src\time.cpp" />
     <ClCompile Include="code\src\timestamp.cpp" />
-    <ClCompile Include="code\src\datatype.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\inc\dateImpl.hpp" />

@@ -61,6 +61,7 @@
     <ClCompile Include="testFlags.cpp" />
     <ClCompile Include="testHelp.cpp" />
     <ClCompile Include="testOptions.cpp" />
+    <ClCompile Include="testRanges.cpp" />
     <ClCompile Include="testTools.cpp" />
   </ItemGroup>
   <ItemGroup>

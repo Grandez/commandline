@@ -8,7 +8,7 @@
 using namespace std;
 
 namespace NSCLP {
-   Natural::Natural() { value = 0x0; }
+   Natural::Natural() { mValue = 0x0; }
    Natural::Natural(string str) : Natural(str.c_str()) {}
    Natural::Natural(const char *str) {
       char * pEnd;
@@ -26,14 +26,14 @@ namespace NSCLP {
       if (lv == 0 && pEnd != 0x0)           throw new ToolsOutOfRangeException(str, "Natural");
       if (pEnd != 0x0)                      throw new ToolsOutOfRangeException(str, "Natural");
       if (lv < 0)                           throw new ToolsOutOfRangeException(str, "Natural"); 
-      value = lv;
+      mValue = lv;
    }
    Natural::Natural(long lvalue) {
-      this->value = lvalue;
+      this->mValue = lvalue;
    }
-   string Natural::toString() { return to_string(value); }
+   string Natural::toString() { return to_string(mValue); }
    char*  Natural::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%d", value);
+        int res = snprintf(buff, size, "%d", mValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

@@ -19,8 +19,8 @@ namespace NSCLP {
       long long lv;
       lv = strtoll (str, &pEnd, base);
       if (lv == LLONG_MAX || lv == LLONG_MIN) throw new ToolsOutOfRangeException(str, "Long Integer");
-      if (lv == 0 && pEnd != 0x0)             throw new ToolsOutOfRangeException(str, "Long Integer");
-      if (pEnd != 0x0)                        throw new ToolsOutOfRangeException(str, "Long Integer");
+      if (lv == 0 && *pEnd != 0x0)            throw new ToolsOutOfRangeException(str, "Long Integer");
+      if (*pEnd != 0x0)                       throw new ToolsOutOfRangeException(str, "Long Integer");
       value = lv;
    }
    bool LongInteger::isInteger() {

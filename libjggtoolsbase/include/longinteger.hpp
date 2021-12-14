@@ -1,11 +1,11 @@
 #pragma once
 
-#include "datatype.hpp"
+#include "number.hpp"
 
 using namespace std;
 
 namespace NSCLP {
-class LongInteger : public DataType {
+class LongInteger : public Number {
 public:
    LongInteger();
    LongInteger(string str);

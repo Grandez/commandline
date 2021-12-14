@@ -3,12 +3,12 @@
 #include <string>
 
 #include "make_config.h"
-#include "datatype.hpp"
+#include "number.hpp"
 
 using namespace std;
 
 namespace NSCLP {
-   class Decimal : public DataType {
+   class Decimal : public Number {
    public:
       Decimal();
       Decimal(string value);
@@ -17,15 +17,15 @@ namespace NSCLP {
       Decimal(long value);
       Decimal(long value, int scale);
 
-      string     toStringRounded(int scale = 0);   
-      char*       toCharRounded(int scale = 0);   
-      float       toFloat();
-      double      toDouble();
-      long        toFloor();
-      long        toCeil();
-      long        getIntPart();
-      long        getDecPart(); 
-      Decimal     round(int scale = 0);
+      string    toStringRounded(int scale = 0);   
+      char*     toCharRounded(int scale = 0);   
+      float     toFloat();
+      double    toDouble();
+      long      toFloor();
+      long      toCeil();
+      long      getIntPart();
+      long      getDecPart(); 
+      Decimal   round(int scale = 0);
 //      const char* format(int scale = -1, int fmt = -1);
 
       Decimal add     (Decimal& a, Decimal& b);
@@ -33,39 +33,39 @@ namespace NSCLP {
       Decimal multiply(Decimal& a, Decimal& b);
       Decimal divide  (Decimal& a, Decimal& b);
 
-        Decimal operator+(Decimal&);
-        Decimal operator-(Decimal&);
-        Decimal operator*(Decimal&);
-        Decimal operator/(Decimal&);
+      Decimal operator+(Decimal&);
+      Decimal operator-(Decimal&);
+      Decimal operator*(Decimal&);
+      Decimal operator/(Decimal&);
 
-        Decimal operator +=(Decimal&);
-        Decimal operator -=(Decimal&);
-        Decimal operator *=(Decimal&);
-        Decimal operator /=(Decimal&);
-        Decimal operator +=(long);
-        Decimal operator -=(long);
-        Decimal operator *=(long);
-        Decimal operator /=(long);
-        Decimal operator +=(double);
-        Decimal operator -=(double);
-        Decimal operator *=(double);
-        Decimal operator /=(double);
+      Decimal operator +=(Decimal&);
+      Decimal operator -=(Decimal&);
+      Decimal operator *=(Decimal&);
+      Decimal operator /=(Decimal&);
+      Decimal operator +=(long);
+      Decimal operator -=(long);
+      Decimal operator *=(long);
+      Decimal operator /=(long);
+      Decimal operator +=(double);
+      Decimal operator -=(double);
+      Decimal operator *=(double);
+      Decimal operator /=(double);
 
-        Decimal operator+(long f);
-        Decimal operator+(double f);
-        Decimal operator-(long f);
-        Decimal operator-(double f);
-        Decimal operator*(long f);
-        Decimal operator*(double f);
-        Decimal operator/(long f);
-        Decimal operator/(double f);
+      Decimal operator+(long f);
+      Decimal operator+(double f);
+      Decimal operator-(long f);
+      Decimal operator-(double f);
+      Decimal operator*(long f);
+      Decimal operator*(double f);
+      Decimal operator/(long f);
+      Decimal operator/(double f);
 
-        bool operator==(Decimal&) ;
-        bool operator!=(Decimal&) ;
-        bool operator< (Decimal&) ;
-        bool operator<=(Decimal&) ;
-        bool operator> (Decimal&) ;
-        bool operator>=(Decimal&) ;
+      bool operator==(Decimal&) ;
+      bool operator!=(Decimal&) ;
+      bool operator< (Decimal&) ;
+      bool operator<=(Decimal&) ;
+      bool operator> (Decimal&) ;
+      bool operator>=(Decimal&) ;
 
       string toString() override;
       char*  toChar  (char *buff, size_t size) override;

@@ -11,6 +11,7 @@
 #endif
 
 namespace NSCLP {
+   Decimal::DecimalImpl::DecimalImpl()             { DecimalImpl("0");           }
    Decimal::DecimalImpl::DecimalImpl(string value) { DecimalImpl(value.c_str()); }
    Decimal::DecimalImpl::DecimalImpl(const char* value)  {
         regex pat{"^[+-]?[0-9]*[\\.,]?[0-9]*$"};

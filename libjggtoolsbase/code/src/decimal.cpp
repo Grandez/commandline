@@ -11,6 +11,7 @@
 #endif
 
 namespace NSCLP {
+   Decimal::Decimal()                      : _pdec(new DecimalImpl(),      [](DecimalImpl *impl) { delete impl; }) {}
    Decimal::Decimal(string      value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}
    Decimal::Decimal(const char* value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}
    Decimal::Decimal(double      value)     : _pdec(new DecimalImpl(value), [](DecimalImpl *impl) { delete impl; }) {}
