@@ -16,6 +16,5 @@ namespace NSCLP {
    protected:
       bool isShort();
       bool isInteger();
-      long long value = 0L;
    };
 }

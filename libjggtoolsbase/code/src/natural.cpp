@@ -8,9 +8,9 @@
 using namespace std;
 
 namespace NSCLP {
-   Natural::Natural() { mValue = 0x0; }
+   Natural::Natural()           { numberValue = 0; }
    Natural::Natural(string str) : Natural(str.c_str()) {}
-   Natural::Natural(const char *str) {
+   Natural::Natural(const char *str)               {
       char * pEnd;
       char prfx[3];
       int base = 10;
@@ -23,16 +23,16 @@ namespace NSCLP {
       long int lv;
       lv = strtol (str, &pEnd, base);
       if (lv == LONG_MAX || lv == LONG_MIN) throw new ToolsOutOfRangeException(str, "Natural");
-      if (lv == 0 && pEnd != 0x0)           throw new ToolsOutOfRangeException(str, "Natural");
-      if (pEnd != 0x0)                      throw new ToolsOutOfRangeException(str, "Natural");
+      if (lv == 0 && *pEnd != 0x0)          throw new ToolsOutOfRangeException(str, "Natural");
+      if (*pEnd != 0x0)                     throw new ToolsOutOfRangeException(str, "Natural");
       if (lv < 0)                           throw new ToolsOutOfRangeException(str, "Natural"); 
-      mValue = lv;
+      numberValue = lv;
    }
-   Natural::Natural(long lvalue) { this->mValue = lvalue; }
-   string Natural::toString()                        { return to_string(mValue); }
-   char*  Natural::toChar  (char *buff, size_t size) {
-        long nValue = (long) mValue;
-        int res = snprintf(buff, size, "%d", nValue);
+   Natural::Natural(long lvalue)                   { this->numberValue = lvalue; }
+   string Natural::toString()                      { return to_string(numberValue); }
+   char*  Natural::toChar(char *buff, size_t size) {
+        long nValue = (long) numberValue;
+        int res = snprintf(buff, size, "%ld", nValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

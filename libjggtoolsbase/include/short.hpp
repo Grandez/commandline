@@ -14,8 +14,5 @@ public:
    Short(short lvalue);
    string toString() override;
    char*  toChar  (char *buff, size_t size) override;
-
-private:
-   char value;
 };
 }

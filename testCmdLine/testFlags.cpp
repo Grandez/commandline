@@ -3,14 +3,14 @@
 
 TEST(Flags, no_flags) {
   const char *args[] = {"TEST", 0x0};
-  CmdLine cmdline(1, args);
+  CmdLine cmdline(1, args, Parameters());
   Flags flags = cmdline.getDefaultFlags();
   EXPECT_EQ(flags.size(), 0);
 }
 TEST(Flags, flags_help) {
   const char *args[] = {"TEST", 0x0};
   Parameters parms = {
-     ParmFlag("help")
+     ParmFlag("help", false)
   }; 
   CmdLine cmdline(1, args, parms);
   Flags flags = cmdline.getDefaultFlags();

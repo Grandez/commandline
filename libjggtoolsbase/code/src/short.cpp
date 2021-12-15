@@ -2,7 +2,6 @@
 
 #include "exceptions.hpp"
 #include "msg_locale.hpp"
-#include "longinteger.hpp"
 #include "short.hpp"
 
 #ifdef _WIN32
@@ -20,9 +19,9 @@ namespace NSCLP {
    Short::Short(const char *str) : Integer(str) {
       if (!isShort()) throw new ToolsOutOfRangeException(str, "Short");   
    }
-   string Short::toString() { return to_string(value); }
+   string Short::toString() { return to_string(numberValue); }
    char*  Short::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%d", value);
+        int res = snprintf(buff, size, "%d", (int) numberValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

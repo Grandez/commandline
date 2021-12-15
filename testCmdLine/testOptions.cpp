@@ -3,7 +3,7 @@
 
 TEST(Options, no_options) {
   const char *args[] = {"TEST", 0x0};
-  CmdLine cmdline(1, args);
+  CmdLine cmdline(1, args, Parameters());
   unordered_map<string, string> options = cmdline.getDefaultOptions();
   EXPECT_EQ(options.size(), 0);
 }
