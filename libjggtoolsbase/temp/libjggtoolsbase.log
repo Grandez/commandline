@@ -1,9 +1,10 @@
-﻿Build started 16/12/2021 16:42:28.
-Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 16/12/2021 21:22:10.
+Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\libjggtoolsbase.lastbuildstate".
+       InitializeBuildStatus:
          Creating "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"P:\C\commandline\libjggtoolsbase\\temp\\" /Fd"P:\C\commandline\\libs\libjggtoolsbase64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\byte.cpp code\src\date.cpp code\src\dateImpl.cpp code\src\datetime.cpp code\src\datetimeImpl.cpp code\src\decimal.cpp code\src\decimalImpl.cpp code\src\exceptions.cpp code\src\integer.cpp code\src\logical.cpp code\src\longinteger.cpp code\src\natural.cpp code\src\number.cpp code\src\path.cpp code\src\pathImpl.cpp code\src\short.cpp code\src\sstring.cpp code\src\time.cpp code\src\timestamp.cpp
          byte.cpp
          date.cpp
@@ -49,10 +50,10 @@ Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\libjggtools
        FinalizeBuildStatus:
          Deleting file "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\unsuccessfulbuild".
          Touching "P:\C\commandline\libjggtoolsbase\\temp\libjggtoolsbase.tlog\libjggtoolsbase.lastbuildstate".
-     1>Done Building Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" (Build target(s)).
+     1>Done Building Project "P:\C\commandline\libjggtoolsbase\libjggtoolsbase.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:09.70
+Time Elapsed 00:00:10.17

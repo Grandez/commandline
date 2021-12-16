@@ -1,0 +1,21 @@
+﻿Build started 16/12/2021 21:22:27.
+Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1967,5): warning : The referenced project '..\libcmdline\libcmdline.vcxproj' does not exist.
+     1>P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj(161,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets.
+     1>Done Building Project "P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+       "P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj" (Rebuild target) (1) ->
+       (ResolveProjectReferences target) -> 
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1967,5): warning : The referenced project '..\libcmdline\libcmdline.vcxproj' does not exist.
+
+
+       "P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj" (Rebuild target) (1) ->
+       (EnsureNuGetPackageBuildImports target) -> 
+         P:\C\commandline\tests\testCmdLine\testCmdLine.vcxproj(161,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets.
+
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.01
