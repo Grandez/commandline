@@ -1,0 +1,24 @@
+﻿Build started 16/12/2021 16:42:53.
+Logging verbosity is set to: Normal.     1>Project "P:\C\commandline\sample_cpp\sample_cpp.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "P:\C\commandline\sample_cpp\\tmp\sample_cpp.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /Fo"P:\C\commandline\sample_cpp\\tmp\\" /Fd"P:\C\commandline\sample_cpp\\tmp\vc142.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt sample_cpp.cpp showinfo.cpp
+         sample_cpp.cpp
+         showinfo.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"P:\C\commandline\bin\sample_cpp64.exe" /INCREMENTAL /ILK:"P:\C\commandline\sample_cpp\\tmp\sample_cpp64.ilk" /NOLOGO P:\C\commandline\libs\libcmdline64.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\C\commandline\bin\sample_cpp64.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\C\commandline\bin\sample_cpp64.lib" /MACHINE:X64 P:\C\commandline\sample_cpp\\tmp\sample_cpp.obj
+         P:\C\commandline\sample_cpp\\tmp\showinfo.obj
+         sample_cpp.vcxproj -> P:\C\commandline\bin\sample_cpp64.exe
+       FinalizeBuildStatus:
+         Deleting file "P:\C\commandline\sample_cpp\\tmp\sample_cpp.tlog\unsuccessfulbuild".
+         Touching "P:\C\commandline\sample_cpp\\tmp\sample_cpp.tlog\sample_cpp.lastbuildstate".
+     1>Done Building Project "P:\C\commandline\sample_cpp\sample_cpp.vcxproj" (Build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.81

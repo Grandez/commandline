@@ -17,11 +17,11 @@ namespace NSCLP {
        vector<string> configTypes = {"ini;properties"};
        string sep(";");
        string mtype = (type != 0x0 && strlen(type) > 0) ? string(type) : path.getExt();
-       for (int i = 0; i < configTypes.size(); i++) {
+       for (size_t i = 0; i < configTypes.size(); i++) {
             sstring str(configTypes[i]);
             vector<string> exts = str.tokenize(sep);
-            for (int j = 0; j < exts.size(); j++) {
-                 if (exts[j] == mtype) return i;
+            for (size_t j = 0; j < exts.size(); j++) {
+                 if (exts[j] == mtype) return (int) i;
             }
        } 
        string msg("Configuration files for type ");

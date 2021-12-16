@@ -24,9 +24,9 @@ Parameters  parms {
 
 
 
-int main(int argc, char *argv[]) {
+int main(int argc, const char **argv) {
     try {
-       cmdLine = CmdLine::getInstance(argc, argv,parms);
+       CmdLine cmdLine(argc, argv, parms);
     }
     catch (HelpRequested *help) { 
         showHelp(help); 
@@ -40,8 +40,7 @@ int main(int argc, char *argv[]) {
     if (cmdLine->hasFlag(VERBOSE)) showCurrentConfig();
 
     if (cmdLine->hasFlag(SUMMARY)) showSummary();
-    CmdLine::destroyInstance(cmdLine);
-}
+ }
 
 
 //_CrtMemCheckpoint( &s2 );

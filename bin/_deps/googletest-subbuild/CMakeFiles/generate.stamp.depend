@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeSystem.cmake.in
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/ExternalProject-download.cmake.in
+C:/SDK/CMake/share/cmake-3.22/Modules/ExternalProject.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+C:/SDK/CMake/share/cmake-3.22/Modules/RepositoryInfo.txt.in
+P:/C/commandline/bin/_deps/googletest-subbuild/CMakeFiles/3.22.0/CMakeSystem.cmake
+P:/C/commandline/bin/_deps/googletest-subbuild/CMakeLists.txt
+P:/C/commandline/bin/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt.in

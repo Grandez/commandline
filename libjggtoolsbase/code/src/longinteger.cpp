@@ -35,7 +35,7 @@ namespace NSCLP {
    }
    string LongInteger::toString() { return to_string(numberValue); }
    char*  LongInteger::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%lld", numberValue);
+        size_t res = snprintf(buff, size, "%lld", numberValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

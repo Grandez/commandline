@@ -72,27 +72,39 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)include;C:\SDK\ LeakDetector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDK\ LeakDetector\lib\Win64;$(LibraryPath)</LibraryPath>
-    <OutDir>P:\C\test\bin</OutDir>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <ExecutablePath>$(SolutionDir)bin\;$(ExecutablePath)</ExecutablePath>
+    <IntDir>$(ProjectDir)\tmp\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)include;C:\SDK\ LeakDetector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDK\ LeakDetector\lib\Win64;$(LibraryPath)</LibraryPath>
-    <OutDir>P:\C\test\bin</OutDir>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <ExecutablePath>$(SolutionDir)bin\;$(ExecutablePath)</ExecutablePath>
+    <IntDir>$(ProjectDir)\tmp\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(SolutionDir)include;C:\SDK\ LeakDetector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDK\ LeakDetector\lib\Win64;$(LibraryPath)</LibraryPath>
-    <OutDir>P:\C\test\bin</OutDir>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <ExecutablePath>$(SolutionDir)bin\;$(ExecutablePath)</ExecutablePath>
+    <IntDir>$(ProjectDir)\tmp\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)include;C:\SDK\ LeakDetector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDK\ LeakDetector\lib\Win64;$(LibraryPath)</LibraryPath>
-    <OutDir>P:\C\test\bin</OutDir>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)libcmdline\include\</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <ExecutablePath>$(SolutionDir)bin\;$(ExecutablePath)</ExecutablePath>
+    <IntDir>$(ProjectDir)\tmp\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -105,7 +117,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)libs\libcmdline64.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)libs\libcmdline32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,7 +135,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)libs\libcmdline64.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)libs\libcmdline32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

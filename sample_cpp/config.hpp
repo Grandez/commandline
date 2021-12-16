@@ -1,4 +1,5 @@
 #pragma once
+#include "make_config.h"
 #include "cmdline.hpp"
 
 constexpr auto VERBOSE   = "verbose";
@@ -10,7 +11,7 @@ constexpr auto CONFIG    = "config";
 constexpr auto PATTERN   = "pattern";
 constexpr auto EXT       = "ext";
 
-using namespace cmdline;
+using namespace NSCLP;
 
 
 #ifdef __MAIN__

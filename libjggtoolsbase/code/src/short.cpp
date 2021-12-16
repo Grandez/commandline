@@ -21,7 +21,7 @@ namespace NSCLP {
    }
    string Short::toString() { return to_string(numberValue); }
    char*  Short::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%d", (int) numberValue);
+        size_t res = snprintf(buff, size, "%d", (int) numberValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

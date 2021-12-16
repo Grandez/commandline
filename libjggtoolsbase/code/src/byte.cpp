@@ -42,7 +42,7 @@ namespace NSCLP {
    }
    string Byte::toString() { return to_string((int) mValue); }
    char*  Byte::toChar  (char *buff, size_t size) {
-        int res = snprintf(buff, size, "%d", (int) mValue);
+        size_t res = snprintf(buff, size, "%d", (int) mValue);
         if (res < 0 || res >= size ) throw new ToolsOutOfSpaceException(size);
         return buff;
    }

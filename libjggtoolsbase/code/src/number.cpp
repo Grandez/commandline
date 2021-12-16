@@ -11,7 +11,7 @@ int Number::getBase (const char *str) {
      if (str[beg] != '0') return 10;
      beg++;
      if (str[beg] == 'x' || str[beg] == 'X') return 16;
-     for (int i = beg; i < strlen(str); i++) if (str[i] != '0' && str[i] != '1') return 10;
+     for (size_t i = beg; i < strlen(str); i++) if (str[i] != '0' && str[i] != '1') return 10;
      return 2; 
 };
 }

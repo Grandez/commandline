@@ -7,6 +7,7 @@ p:\c\commandline\libjggtoolsbase\temp\short.obj
 p:\c\commandline\libjggtoolsbase\temp\pathimpl.obj
 p:\c\commandline\libjggtoolsbase\temp\path.obj
 p:\c\commandline\libjggtoolsbase\temp\number.obj
+p:\c\commandline\libjggtoolsbase\temp\natural.obj
 p:\c\commandline\libjggtoolsbase\temp\longinteger.obj
 p:\c\commandline\libjggtoolsbase\temp\logical.obj
 p:\c\commandline\libjggtoolsbase\temp\integer.obj
@@ -18,7 +19,11 @@ p:\c\commandline\libjggtoolsbase\temp\datetime.obj
 p:\c\commandline\libjggtoolsbase\temp\dateimpl.obj
 p:\c\commandline\libjggtoolsbase\temp\date.obj
 p:\c\commandline\libjggtoolsbase\temp\byte.obj
+p:\c\commandline\libs\libjggtoolsbase64.lib
 p:\c\commandline\\libs\libjggtoolsbase64.pdb
 p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\cl.command.1.tlog
 p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\cl.read.1.tlog
 p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\cl.write.1.tlog
+p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\lib-link.read.1.tlog
+p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\lib-link.write.1.tlog
+p:\c\commandline\libjggtoolsbase\temp\libjggtoolsbase.tlog\lib.command.1.tlog

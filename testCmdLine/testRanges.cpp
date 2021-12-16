@@ -61,11 +61,6 @@ TEST(Ranges, byte_invalid_less) {
   Parameters parms = {
      ParmRange("range", Type::BYTE, 0, 16)
   }; 
-  try {
-     CmdLine cmdline(3, args, parms);
-  } catch (exception *ex) {
-     ex->what();
-  }
   EXPECT_THROW(new CmdLine(3, args, parms), CmdLineValueException *);
 }
 TEST(Ranges, byte_invalid_more) {
