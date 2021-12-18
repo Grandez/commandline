@@ -8,9 +8,10 @@
 using namespace std;
 
 namespace NSCLP {
-   Byte::Byte() { mValue = byte(0x0); }
+   Byte::Byte() { }
    Byte::Byte(string str) : Byte(str.c_str()) {}
-   Byte::Byte(const char *str) {
+   Byte::Byte(const char *str) : Byte(){
+      if (str == 0x0) return;
       char * pEnd;
       char prfx[3];
       int base = 10;

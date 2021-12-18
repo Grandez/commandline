@@ -11,6 +11,7 @@ namespace NSCLP {
    Natural::Natural()           { numberValue = 0; }
    Natural::Natural(string str) : Natural(str.c_str()) {}
    Natural::Natural(const char *str)               {
+      if (str == 0x0) return;
       char * pEnd;
       char prfx[3];
       int base = 10;

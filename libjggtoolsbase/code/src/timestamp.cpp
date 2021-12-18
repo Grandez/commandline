@@ -15,7 +15,7 @@
 
 namespace NSCLP {
    Timestamp::Timestamp() : DateTime() {
-      //Timestamp::uSec++;
+      Timestamp::uSec++;
 #ifndef _WIN32
       struct timeval mTimeval;
       gettimeofday (&mTimeval, NULL);
@@ -23,11 +23,11 @@ namespace NSCLP {
 #endif
    }
    Timestamp::Timestamp(sstring     str) : DateTime(str) { 
-//Timestamp::uSec++; 
-}
+      Timestamp::uSec++; 
+   }
    Timestamp::Timestamp(const char* str) : DateTime(str) { 
-//Timestamp::uSec++; 
-}
+      Timestamp::uSec++; 
+   }
    string Timestamp::toString() {
       char fmt[] = "%04d-%02d-%02d-%02d:%02d:%02d.06d";
       char buff[30];  

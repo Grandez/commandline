@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="code\src\array.cpp" />
     <ClCompile Include="code\src\byte.cpp" />
+    <ClCompile Include="code\src\datatype.cpp" />
     <ClCompile Include="code\src\date.cpp" />
     <ClCompile Include="code\src\dateImpl.cpp" />
     <ClCompile Include="code\src\datetime.cpp" />
@@ -31,6 +33,7 @@
     <ClCompile Include="code\src\logical.cpp" />
     <ClCompile Include="code\src\longinteger.cpp" />
     <ClCompile Include="code\src\natural.cpp" />
+    <ClCompile Include="code\src\nodatatype.cpp" />
     <ClCompile Include="code\src\number.cpp" />
     <ClCompile Include="code\src\path.cpp" />
     <ClCompile Include="code\src\pathImpl.cpp" />
@@ -40,11 +43,15 @@
     <ClCompile Include="code\src\timestamp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="code\inc\array.hpp" />
     <ClInclude Include="code\inc\dateImpl.hpp" />
     <ClInclude Include="code\inc\decimalImpl.hpp" />
     <ClInclude Include="code\inc\msg_locale.hpp" />
+    <ClInclude Include="code\inc\nodatatype.hpp" />
     <ClInclude Include="code\inc\pathImpl.hpp" />
     <ClInclude Include="include\byte.hpp" />
+    <ClInclude Include="include\datatypeenum.hpp" />
+    <ClInclude Include="include\datatypelist.hpp" />
     <ClInclude Include="include\decimal.hpp" />
     <ClInclude Include="include\exceptions.hpp" />
     <ClInclude Include="include\integer.hpp" />
@@ -55,6 +62,7 @@
     <ClInclude Include="include\sstring.hpp" />
     <ClInclude Include="include\time.hpp" />
     <ClInclude Include="include\datatype.hpp" />
+    <ClInclude Include="include\types.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -20,6 +20,7 @@ namespace NSCLP {
       splitPath();
    }
    PathImpl::PathImpl(const char *str) : path (str) {
+       if (str == 0x0) return;
        PathType mtype = checkIfExists();
        valid = (mtype == PathType::Unknow) ? false : true;
        if (valid) type = mtype;

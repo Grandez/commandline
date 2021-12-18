@@ -22,7 +22,8 @@ namespace NSCLP {
       memcpy(&mtm, localtime(&now), sizeof(struct tm));
       lvalue = now;
    }
-   DateTime::DateTime(const char *str) {
+   DateTime::DateTime(const char *str) : DateTime() {
+      if (str == 0x0) return;
       regex pat{ "^[0-9]{4}[/-]{1}[0-9]{1,2}[/-]{1}[0-9]{1,2}[/-]{1}[/- ]{1}[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
 	  bool match = regex_search(str, pat);
 	  if (!match) throw new ToolsCastException(BAD_DATETIME, str);

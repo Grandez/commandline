@@ -18,7 +18,7 @@ public:
    char*  toChar  (char *buff, size_t size) override;
 
 private:
-   bool mValue;
+   bool mValue = false;
    void setValue(const char *str);
 };
 }

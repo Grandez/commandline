@@ -22,6 +22,7 @@ namespace NSCLP {
       calculateLongDate(); 
    }
    DateImpl::DateImpl(const char *str, int fmt) : DateImpl() {
+      if (str == 0x0) return;
       validateDate(str, fmt);
       calculateJulianDay();
       calculateLongDate(); 
@@ -102,7 +103,8 @@ namespace NSCLP {
       // tm contains year - 1900
       // Since 1900 all leaps years are including 2000
       int leaps = (mtm.tm_year - 1) / 4;
-      lvalue = (mtm.tm_year - 1) * 365;
+      lvalue  = mtm.tm_year - 1l;
+      lvalue *= 365;
       lvalue += leaps;
       calculateJulianDay(mtm.tm_year + 1900, mtm.tm_mon + 1, mtm.tm_mday);
       lvalue += mtm.tm_yday;

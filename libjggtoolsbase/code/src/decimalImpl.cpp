@@ -14,6 +14,7 @@ namespace NSCLP {
    Decimal::DecimalImpl::DecimalImpl()             { DecimalImpl("0");           }
    Decimal::DecimalImpl::DecimalImpl(string value) { DecimalImpl(value.c_str()); }
    Decimal::DecimalImpl::DecimalImpl(const char* value)  {
+        if (value == 0x0) return;
         regex pat{"^[+-]?[0-9]*[\\.,]?[0-9]*$"};
 		bool match = regex_search(value, pat);
 		if (!match) throw new ToolsValueException(BAD_DECIMAL, value);
@@ -174,8 +175,8 @@ namespace NSCLP {
 
    sstring Decimal::DecimalImpl::makeString(long long value, int scale) {
        string str = to_string(value * 10);
-       int idx = (int) str.length() - 2;
-       for (int i = 0; i < scale; i++) str[idx + 1] = str[idx];
+       size_t idx = str.length() - 2;
+       for (int i = 0; i < scale; i++) str[idx + (size_t) 1] = str[idx];
        str[idx] = '.';
        return sstring(str);
    }

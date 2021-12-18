@@ -30,6 +30,7 @@ private:
       time_t lvalue = 0l; 
       void setStructTm();
       void setLongTime();
-      void setLongTime(long lvalue);
+      void setLongTime(long);
+      void parseString(string);
 };
 }

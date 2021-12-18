@@ -18,7 +18,6 @@ namespace NSCLP {
 //     PathBridge(const Path& mPath) : PathImpl(mPath)       {}
    };
    Path::Path()                   : _pb(new PathBridge(),            [](PathBridge *pb) { delete pb; }) {}  
-//   Path::Path(const Path& path)   : _pb(new PathBridge(path),        [](PathBridge *pb) { delete pb; }) {}  
    Path::Path(string str)         : _pb(new PathBridge(str),         [](PathBridge *pb) { delete pb; }) {}  
    Path::Path(const char *str)    : _pb(new PathBridge(str),         [](PathBridge *pb) { delete pb; }) {}  
 

@@ -14,6 +14,7 @@ namespace NSCLP {
    LongInteger::LongInteger(long long   value)  { this->numberValue = value; }
    LongInteger::LongInteger(string str) : LongInteger(str.c_str()) {}
    LongInteger::LongInteger(const char *str) {
+      if (str == 0x0) return;
       char * pEnd;
       int base = getBase(str);
       long long lv;

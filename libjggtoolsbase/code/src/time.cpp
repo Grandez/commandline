@@ -15,26 +15,19 @@ namespace NSCLP {
       memcpy(&mtm, localtime(&now), sizeof(struct tm));
       setLongTime();
    }
-   Time::Time(string str) {
-      regex pat{ "^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
-	  bool match = regex_search(str, pat);
-	  if (!match) throw new ToolsCastException(BAD_TIME, str);
-	  vector<int> res = sstring(str).tokenizeNumber(":");
-	  if (res[0] < 0 || res[0] > 23) throw new ToolsCastException(BAD_TIME, str);
-	  for (int i = 1; i < 3; i++) {
-		  if (res[i] < 0 || res[i] > 59) throw new ToolsCastException(BAD_TIME, str);
-      }
-      lvalue = (res[0] * 3600) + (res[1] * 60) + res[2];
-      setStructTm();
-
+   Time::Time(string str)      : Time() { if (str.length() > 0) parseString(str); }
+   Time::Time(const char *str) : Time() {
+      if (str == 0x0) return;
+      parseString(string(str));
    }
-   Time::Time(const char *str) : Time(string(str)) {}
    Time::Time(long lvalue) { setLongTime(lvalue); }
    Time::Time(int hour, int minutes, int seconds) {
         if (hour < 0    || hour > 23)    throw new ToolsValueException(BAD_VALUE, hour);
         if (minutes < 0 || minutes > 59) throw new ToolsValueException(BAD_VALUE, minutes);
         if (seconds < 0 || seconds > 59) throw new ToolsValueException(BAD_VALUE, seconds);
-        lvalue = (hour * 3600) + (minutes * 60) + seconds;
+        lvalue  = ((long) hour * 3600) ;
+        lvalue += ((long) minutes * 60);
+        lvalue += seconds;
         setStructTm();
    }
    int Time::getHour()     { return mtm.tm_hour;    }
@@ -74,6 +67,20 @@ namespace NSCLP {
        this->lvalue = lvalue % 86400;
     }
     void Time::setLongTime() {
-        lvalue = (mtm.tm_hour * 3600) + (mtm.tm_min * 60) + mtm.tm_sec;
+        lvalue  = ((long) mtm.tm_hour * 3600l);
+        lvalue += (mtm.tm_min * 60l) + mtm.tm_sec;
+    }
+    void Time::parseString(string str) {
+        regex pat{ "^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$" };
+	    bool match = regex_search(str, pat);
+	    if (!match) throw new ToolsCastException(BAD_TIME, str);
+	    vector<int> res = sstring(str).tokenizeNumber(":");
+	    if (res[0] < 0 || res[0] > 23) throw new ToolsCastException(BAD_TIME, str);
+	    for (int i = 1; i < 3; i++) {
+		    if (res[i] < 0 || res[i] > 59) throw new ToolsCastException(BAD_TIME, str);
+        }
+        lvalue  = ((long) res[0] * 3600l);
+        lvalue += (res[1] * 60l) + res[2];
+        setStructTm();
     }
 }

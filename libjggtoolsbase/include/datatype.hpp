@@ -1,11 +1,14 @@
 #pragma once
+#include <any>
 #include <string>
-#include "make_config.h"
+#include "types.hpp"
 
+using namespace std;
 namespace NSCLP {
    class DataType {
    public:
-       virtual std::string toString() = 0;
-       virtual char*       toChar(char *buff, size_t size)   = 0;
+       virtual string   toString() = 0;
+       virtual char*    toChar(char *buff, size_t size)   = 0;
+       static DataType* createDataType(int type, const char *value = 0x0);
    };
 }
